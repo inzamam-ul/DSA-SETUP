@@ -1,0 +1,14 @@
+{
+  "debug.onTaskErrors": "showErrors",
+  "editor.fontSize": 20,
+  "workbench.colorTheme": "Operator Mono Dark Theme",
+  // Controls the font family.
+  "editor.fontFamily": "Operator Mono Lig",
+  // Enables font ligatures
+  "editor.fontLigatures": true,
+  "files.associations": {
+    "set": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp"
+  }
+}

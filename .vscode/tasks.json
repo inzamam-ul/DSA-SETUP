@@ -1,0 +1,128 @@
+{
+  "tasks": [
+    {
+      // For
+      // C
+      // and
+      // C++
+      // Programs
+      "label": "Compile and run Cpp",
+      "type": "shell",
+      "windows": {
+        "command": "",
+        "args": [
+          "copy",
+          "${file}",
+          "${workspaceFolder}\\cppTest.cpp",
+          "&&",
+          "g++",
+          "cppTest.cpp",
+          "-o",
+          "cppTest",
+          "&&",
+          "cppTest",
+          "<",
+          "${workspaceFolder}\\InputOutput\\inputf.in",
+          ">",
+          "${workspaceFolder}\\InputOutput\\outputf.in",
+          "&&",
+          "del",
+          "cppTest.exe",
+          "&&",
+          "del",
+          "cppTest.cpp"
+        ]
+      },
+      "linux": {
+        "command": "",
+        "args": [
+          "g++",
+          "-g",
+          "${relativeFile}",
+          "-o",
+          "${fileBasenameNoExtension}.out",
+          "&&",
+          "clear",
+          "&&",
+          "timeout",
+          "10",
+          "/usr/bin/time",
+          "-v",
+          "--output",
+          "sys.txt",
+          "./${fileBasenameNoExtension}.out",
+          "<",
+          "./InputOutput/inputf.in",
+          ">",
+          "./InputOutput/outputf.in",
+          "&&",
+          "rm",
+          "*out"
+        ]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": ["relative", "${workspaceRoot}"],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      }
+    },
+    {
+      "type": "shell",
+      "label": "C/C++: g++ build active file",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "windows": {
+        "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+        "args": [
+          "-pipe",
+          // "-fsanitize=signed-integer-overflow,undefined", Causes compilation error in Windows
+          "-g",
+          "-march=native",
+          // "-O2", This optimization causes errors while Debugging
+          // "-std=c++17", Causes compilation error in Windows
+          "-Wall",
+          "-Wshadow",
+          "-Wno-unused-result",
+          "${file}",
+          "-o",
+          "${fileDirname}/${fileBasenameNoExtension}"
+        ]
+      },
+      "linux": {
+        "command": "/usr/bin/g++",
+        "args": [
+          "-pipe",
+          "-fsanitize=signed-integer-overflow,undefined",
+          "-g",
+          "-march=native",
+          // "-O2", This optimization causes errors while Debugging
+          "-std=c++17",
+          "-Wall",
+          "-Wshadow",
+          "-Wno-unused-result",
+          "${file}",
+          "-o",
+          "${fileDirname}/${fileBasenameNoExtension}"
+        ]
+      }
+    }
+  ],
+  "version": "2.0.0"
+}
