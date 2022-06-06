@@ -3,7 +3,7 @@
   "editor.fontSize": 20,
   "workbench.colorTheme": "Operator Mono Dark Theme",
   // Controls the font family.
-  "editor.fontFamily": "Operator Mono Lig",
+  "editor.fontFamily": "Operator Mono Lig, Fira Code",
   // Enables font ligatures
   "editor.fontLigatures": true,
   "files.associations": {
