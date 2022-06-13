@@ -4,6 +4,10 @@ using namespace std;
 struct ListNode {
     ListNode* next;
     int data;
+    ListNode() {
+        data = NULL;
+        next = NULL;
+    }
     ListNode(int in) {
         data = in;
         next = NULL;
@@ -15,50 +19,25 @@ struct ListNode {
 };
 
 ListNode* removeNthFromEnd(ListNode* head, int n) {
-    ListNode * start;
-    start->next = head;
-    ListNode *fast = start;
-    ListNode *slow = start;
+        ListNode * start = new ListNode();
+        start->next = head;
+        ListNode* fast = start;
+        ListNode* slow = start;
 
-    for (size_t i = 0; i <= n; i++)
-    {
-        fast = start->next;
-    }
+        for (int i = 1; i <= n; ++i)
+        {
+            fast = fast->next;
+        }
 
-    while (fast->next)
-    {
-        slow->next = slow->next;
-        fast->next = fast->next;
-    }
+        while (fast->next != NULL)
+        {
+            fast = fast->next;
+            slow = slow->next;
+        }
 
-    slow->next = slow->next->next;
+        slow->next = slow->next->next;
 
-    return start->next;
+        return start->next;
     
 }
 
-
-
-//right code
-//TODO: have to compare with mine
-
-// ListNode* removeNthFromEnd(ListNode* head, int n) {
-//         ListNode * start = new ListNode();
-//         start -> next = head;
-//         ListNode* fast = start;
-//         ListNode* slow = start;     
-
-//         for(int i = 1; i <= n; ++i)
-//             fast = fast->next;
-    
-//         while(fast->next != NULL)
-//         {
-//             fast = fast->next;
-//             slow = slow->next;
-//         }
-        
-//         slow->next = slow->next->next;
-        
-//         return start->next;
-
-// }

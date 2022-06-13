@@ -1,35 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-template <typename T>
-class Node {
-    public:
-    T data;
-    Node* next;
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
 
-    Node(T data) {
-        next = NULL;
-        this->data = data;
-    }
-
-    ~Node() {
-        if (next != NULL) {
-            delete next;
+ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+    ListNode dummy(INT_MIN);
+    ListNode *tail = &dummy;
+    
+    while (list1 && list2) {
+        if (list1->val < list2->val) {
+            tail->next = list1;
+            list1 = list1->next;
+        } else {
+            tail->next = list2;
+            list2 = list2->next;
         }
-    }
-}
-
-Node<int>* sortTwoLists(Node<int>* first, Node<int>* second)
-{
-    if(first == NULL) return second;
-    if(second == NULL) return first;
-
-    Node<int> = second;
-
-    if(first->data < second->data){
-        head = first;
-        first = first->next
+        tail = tail->next;
     }
 
-    if(first)
+    tail->next = list1 ? list1 : list2;
+    return dummy.next;
 }
