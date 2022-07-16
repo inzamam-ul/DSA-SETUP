@@ -7,9 +7,8 @@ def findPaths(m, n, maxMove, startRow, startColumn):
         if r<0 or c<0 or r>=m or c>=n: return 1
         if M == 0: return 0
         ans = 0
-        for x,y in [(1,0), (-1, 0), (0,1)]:
+        for x,y in [(1,0), (-1, 0), (0,1), (0,-1)]:
             ans += findPathHelper(r+x, c+y, M-1)
-        print(memo)
         memo[(r, c, M)] = ans
         return ans
     return findPathHelper(startRow, startColumn, maxMove)
