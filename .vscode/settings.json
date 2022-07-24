@@ -12,6 +12,16 @@
     "ostream": "cpp",
     "vector": "cpp",
     "unordered_map": "cpp",
-    "new": "cpp"
+    "new": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "unordered_set": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp",
+    "span": "cpp",
+    "regex": "cpp"
   }
 }
