@@ -22,6 +22,8 @@
     "string_view": "cpp",
     "initializer_list": "cpp",
     "span": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "ranges": "cpp",
+    "valarray": "cpp"
   }
 }
