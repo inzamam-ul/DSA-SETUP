@@ -24,6 +24,7 @@
     "span": "cpp",
     "regex": "cpp",
     "ranges": "cpp",
-    "valarray": "cpp"
+    "valarray": "cpp",
+    "taskscheduler": "cpp"
   }
 }

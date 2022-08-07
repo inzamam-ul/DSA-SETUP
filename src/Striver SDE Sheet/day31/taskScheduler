@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int leastInterval(vector<int> &tasks, int n)
+{
+    unordered_map<int, int> mp;
+    int count = 0;
+    for (auto e : tasks)
+    {
+        mp[e]++;
+        count = max(count, mp[e]);
+    }
+
+    int ans = (count * n) - 1;
+    for (auto e : mp)
+        if (e.second == count)
+            ans++;
+    return max((int)tasks.size(), ans);
+}
+
+int main(int argc, char const *argv[])
+{
+    vector<int> tasks = {5, 8, 8, 5};
+    int space = 2;
+
+    int ans = leastInterval(tasks, space);
+    cout << ans;
+    return 0;
+}
