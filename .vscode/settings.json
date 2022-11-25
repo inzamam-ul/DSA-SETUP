@@ -26,5 +26,6 @@
     "ranges": "cpp",
     "valarray": "cpp",
     "taskscheduler": "cpp"
-  }
+  },
+  "cSpell.words": ["heapify"]
 }
