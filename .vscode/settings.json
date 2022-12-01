@@ -1,6 +1,6 @@
 {
   "debug.onTaskErrors": "showErrors",
-  "editor.fontSize": 20,
+  "editor.fontSize": 18,
   // "workbench.colorTheme": "Operator Mono Dark Theme",
   // Controls the font family.
   "editor.fontFamily": "Operator Mono Lig, Fira Code",
