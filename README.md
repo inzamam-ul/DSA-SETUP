@@ -36,7 +36,7 @@ I'm an indie full-stack developer All coding projects are built from the ground 
 
 ### 📊 Stats
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/inzamam-ul?theme=wtf&font=Barlow&ext=contest)
+![LeetCode Stats](https://leetcard.jacoblin.cool/inzamamul_haque?theme=wtf&font=Barlow&ext=contest)
 
 ![Inzamam's GitHub stats](https://github-readme-stats.vercel.app/api?username=inzamam-ul&show_icons=true&theme=gruvbox) ![GitHub Streak](https://streak-stats.demolab.com?user=inzamam-ul&theme=gruvbox&border_radius=4.5)
 
