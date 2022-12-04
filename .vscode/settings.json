@@ -1,6 +1,6 @@
 {
   "debug.onTaskErrors": "showErrors",
-  "editor.fontSize": 20,
+  "editor.fontSize": 19,
   // "workbench.colorTheme": "Operator Mono Dark Theme",
   // Controls the font family.
   "editor.fontFamily": "Operator Mono Lig, Fira Code",
@@ -25,7 +25,9 @@
     "regex": "cpp",
     "ranges": "cpp",
     "valarray": "cpp",
-    "taskscheduler": "cpp"
+    "taskscheduler": "cpp",
+    "bitset": "cpp",
+    "utility": "cpp"
   },
   "cSpell.words": ["heapify"]
 }
